@@ -29,8 +29,12 @@ public class TestRun {
         searchFor.getSearchInput().val("планшеты").pressEnter();
 
         compareItems.getCompareFirstItem().click();
+        compareItems.getCompareFirstItem().getAttribute("class").contains("active");
         compareItems.getCompareSecondItem().click();
+        compareItems.getCompareSecondItem().getAttribute("class").contains("active");
         compareItems.getCompareThirdItem().click();
+        compareItems.getCompareThirdItem().getAttribute("class").contains("active");
+
         if (compareItems.getQuestionPopup().isDisplayed()) {
             compareItems.getQuestionPopupClose().click();
         }

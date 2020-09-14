@@ -1,29 +1,27 @@
 package pageComponents;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class CompareItems {
-    SelenideElement compareFirstItem = $(byXpath("//*[@class='compare-button']"));
+    ElementsCollection compareFirstItem = $$(byXpath("//*[contains(@class,'compare-button')]"));
 
     public SelenideElement getCompareFirstItem() {
-        return compareFirstItem;
+        return compareFirstItem.get(0);
     }
-
-    SelenideElement compareSecondItem = $(byXpath("//*[@class='compare-button']"));
 
     public SelenideElement getCompareSecondItem() {
-        return compareSecondItem;
+        return compareFirstItem.get(1);
     }
 
-    SelenideElement compareThirdItem = $(byXpath("//*[@class='compare-button']"));
-
     public SelenideElement getCompareThirdItem() {
-        return compareThirdItem;
+        return compareFirstItem.get(2);
     }
 
     SelenideElement compareAllItems = $(byXpath("//button[@class='header-actions__button header-actions__button_type_compare header-actions__button_state_active']"));
