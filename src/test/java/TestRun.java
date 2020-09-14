@@ -31,6 +31,9 @@ public class TestRun {
         compareItems.getCompareFirstItem().click();
         compareItems.getCompareSecondItem().click();
         compareItems.getCompareThirdItem().click();
+        if (compareItems.getQuestionPopup().isDisplayed()) {
+            compareItems.getQuestionPopupClose().click();
+        }
         compareItems.getCompareAllItems().click();
         compareItems.getCompareAllItemsVisual().click();
         compareItems.getCompareAllItemsNewPage().waitUntil(Condition.appear, 3000);
