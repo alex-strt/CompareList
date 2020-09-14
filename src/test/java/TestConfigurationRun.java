@@ -1,28 +1,17 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeMethod;
+import configuration.TestConfiguration;
 import org.testng.annotations.Test;
 import pageComponents.CompareItems;
 import pageComponents.DeleteFromCompareList;
 import pageComponents.SearchFor;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.*;
 
-public class TestRun {
+public class TestConfigurationRun extends TestConfiguration {
 
-    private final String baseURL = "https://rozetka.com.ua/";
     SearchFor searchFor = new SearchFor();
     CompareItems compareItems = new CompareItems();
     DeleteFromCompareList deleteFromCompareList = new DeleteFromCompareList();
-
-    @BeforeMethod
-    public void beforeMethod() {
-        isChrome();
-        open(baseURL);
-        Configuration.timeout = 10000;
-    }
 
     @Test
     public void compareItems(){
