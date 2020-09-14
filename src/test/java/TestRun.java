@@ -56,6 +56,7 @@ public class TestRun {
         deleteFromCompareList.getConfirmationDeleteSecondItemFromList().click();
         deleteFromCompareList.getDeleteThirdItemFromList().click();
         deleteFromCompareList.getConfirmationDDeleteThirdItemFromList().click();
+        //deleteFromCompareList.getCloseTheModalWindow().click();
 
 
     }
