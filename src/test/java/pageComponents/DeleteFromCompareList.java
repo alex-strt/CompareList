@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 
 public class DeleteFromCompareList {
 
@@ -54,7 +53,6 @@ public class DeleteFromCompareList {
     }
 
     SelenideElement confirmationDeleteSecondItemFromList = $(byXpath("//button[contains(.,'Удалить')]"));
-//    SelenideElement confirmationDeleteSecondItemFromList = $(byXpath("//button[@class='button button--medium button--with-icon button--link context-menu-actions__button'][contains(.,'Удалить')]"));
 
     public SelenideElement getConfirmationDeleteSecondItemFromList() {
 
@@ -72,7 +70,6 @@ public class DeleteFromCompareList {
     }
 
     SelenideElement confirmationDeleteThirdItemFromList = $(byXpath("//button[contains(.,'Удалить')]"));
-//    SelenideElement confirmationDeleteThirdItemFromList = $(byXpath("//button[@class='button button--medium button--with-icon button--link context-menu-actions__button'][contains(.,'Удалить')]"));
 
     public SelenideElement getConfirmationDeleteThirdItemFromList() {
 
