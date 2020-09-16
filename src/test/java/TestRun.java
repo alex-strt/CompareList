@@ -5,9 +5,7 @@ import pageComponents.CompareItems;
 import pageComponents.DeleteFromCompareList;
 import pageComponents.SearchFor;
 
-import static com.codeborne.selenide.Selenide.open;
-
-public class TestConfigurationRun extends TestConfiguration {
+public class TestRun extends TestConfiguration {
 
     SearchFor searchFor = new SearchFor();
     CompareItems compareItems = new CompareItems();
@@ -48,14 +46,8 @@ public class TestConfigurationRun extends TestConfiguration {
         deleteFromCompareList.getDeleteSecondItemFromList().click();
         deleteFromCompareList.getConfirmationDeleteSecondItemFromList().click();
         deleteFromCompareList.getDeleteThirdItemFromList().click();
-        deleteFromCompareList.getConfirmationDDeleteThirdItemFromList().click();
-        //deleteFromCompareList.getCloseTheModalWindow().click();
-
+        deleteFromCompareList.getConfirmationDeleteThirdItemFromList().click();
 
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//
-//    }
 }

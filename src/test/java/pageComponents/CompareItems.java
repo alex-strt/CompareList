@@ -25,7 +25,6 @@ public class CompareItems {
     }
 
     SelenideElement compareAllItems = $(byXpath("//button[@class='header-actions__button header-actions__button_type_compare header-actions__button_state_active']"));
-    //SelenideElement compareAllItems = $(byXpath("//button[@class='header-actions__button header-actions__button_type_compare header-actions__button_state_active'][contains(.,'3')]"));
 
     public SelenideElement getCompareAllItems() {
         return compareAllItems;
