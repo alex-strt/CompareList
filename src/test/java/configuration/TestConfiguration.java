@@ -1,9 +1,11 @@
 package configuration;
 
 import com.codeborne.selenide.Configuration;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.driver;
 import static com.codeborne.selenide.WebDriverRunner.isChrome;
 
 public class TestConfiguration {
@@ -18,4 +20,10 @@ public class TestConfiguration {
         open(baseURL);
 
     }
+
+    @AfterClass
+    public void tearDown() {
+        driver().close();
+    }
+
 }
