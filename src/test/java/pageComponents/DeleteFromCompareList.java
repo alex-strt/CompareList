@@ -1,9 +1,11 @@
 package pageComponents;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class DeleteFromCompareList {
 
@@ -25,7 +27,7 @@ public class DeleteFromCompareList {
 
     }
 
-//    //old version
+    //old version
 
     SelenideElement deleteFirstItemFromList = $(byXpath("//button[contains(@aria-controls,'comparisonProductActions0')]"));
 
@@ -77,13 +79,65 @@ public class DeleteFromCompareList {
     }
 
 
-    SelenideElement closeTheModalWindow = $(byXpath("//button[contains(@aria-label,'Закрыть модальное окно')]"));
 
-    public SelenideElement getCloseTheModalWindow() {
 
-        return closeTheModalWindow;
+//    //new version
+//
+//    ElementsCollection deleteFirstItemFromList = $$(byXpath("//button[@aria-controls='comparisonProductActions0']"));
+//
+//    public SelenideElement getDeleteFirstItemFromList() {
+//
+//        return deleteFirstItemFromList.get(0);
+//
+//    }
+//
+//    public SelenideElement getDeleteSecondItemFromList() {
+//
+//        return deleteFirstItemFromList.get(1);
+//
+//    }
+//
+//    public SelenideElement getDeleteThirdItemFromList() {
+//
+//        return deleteFirstItemFromList.get(2);
+//
+//    }
+//
+//    SelenideElement confirmationDeleteFirstItemFromList = $(byXpath("//button[@class='button button--medium button--with-icon button--link context-menu-actions__button'][contains(.,'Удалить')]"));
+//
+//    public SelenideElement getConfirmationDeleteFirstItemFromList() {
+//
+//        return confirmationDeleteFirstItemFromList;
+//
+//    }
+//
+//    SelenideElement confirmationDeleteSecondItemFromList = $(byXpath("//button[contains(.,'Удалить')]"));
+//
+//    public SelenideElement getConfirmationDeleteSecondItemFromList() {
+//
+//        return confirmationDeleteSecondItemFromList;
+//
+//    }
+//
+//    SelenideElement confirmationDeleteThirdItemFromList = $(byXpath("//button[contains(.,'Удалить')]"));
+//
+//    public SelenideElement getConfirmationDeleteThirdItemFromList() {
+//
+//        return confirmationDeleteThirdItemFromList;
+//
+//    }
+//
+//
+//
+//    SelenideElement closeTheModalWindow = $(byXpath("//button[contains(@aria-label,'Закрыть модальное окно')]"));
+//
+//    public SelenideElement getCloseTheModalWindow() {
+//
+//        return closeTheModalWindow;
+//
+//    }
 
-    }
+
 }
 
 

@@ -13,7 +13,9 @@ public class TestConfiguration {
     @BeforeMethod
     public void beforeMethod() {
         isChrome();
-        open(baseURL);
+        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
+        open(baseURL);
+
     }
 }
